@@ -1,3 +1,11 @@
-p {
-	color: #414141;
-}
+// Import default variables and available mixins.
+@import "uikit/src/scss/variables-theme";
+@import "uikit/src/scss/mixins-theme";
+
+// Import UIkit. (https://getuikit.com/docs/sass)
+@import "uikit/src/scss/uikit-theme";
+
+// Components
+@import "_variables";
+@import "_navbar";
+@import "main";
