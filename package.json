@@ -16,6 +16,7 @@
     "load-grunt-tasks": "^4.0.0"
   },
   "dependencies": {
+    "hoek": "^5.0.3",
     "jquery": "^3.3.1"
   }
 }
