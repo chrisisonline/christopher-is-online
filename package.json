@@ -1,22 +1,27 @@
 {
-  "name": "testing-bourbon",
-  "version": "0.0.1",
-  "description": "Testing out sass UI styles",
+  "name": "Chris-Is-Online",
+  "version": "1.0.0",
+  "description": "Homepage for everything Chris",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production && webpack-dev-server",
+    "dev": "webpack-dev-server"
   },
   "author": "Chris Jiang",
   "license": "ISC",
   "devDependencies": {
-    "grunt": "^1.0.2",
-    "grunt-contrib-uglify": "^3.3.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-sass": "^2.1.0",
-    "load-grunt-tasks": "^4.0.0"
+    "webpack": "^4.14.0",
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "hoek": "^5.0.3",
-    "jquery": "^3.3.1"
-  }
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "uikit": "^3.0.0-rc.6",
+    "url-loader": "^1.0.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "repository": "https://github.com/chrisisonline/christopher-is-online.git"
 }
