@@ -10,6 +10,7 @@
   "author": "Chris Jiang",
   "license": "ISC",
   "devDependencies": {
+    "bourbon": "^5.0.1",
     "webpack": "^4.14.0",
     "webpack-dev-server": "^3.1.4"
   },
