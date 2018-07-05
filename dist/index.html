@@ -5,11 +5,19 @@
 </head>
 <body>
 	<div id="fullpage">
-		<div class="section">Some section</div>
-		<div class="section">Some section</div>
-		<div class="section">Some section</div>
+		<div class="section violet">Some section</div>
+		<div class="section teal">Some section</div>
+		<div class="section red">Some section</div>
 		<div class="section">Some section</div>
 	</div>
-	<script src="./bundle.js"></script>
+  <script src="./bundle.js"></script>
+	<script src="./fullpage.js"></script>
+	<script>
+		$(document).ready(function() {
+      $("#fullpage").fullpage({
+        licenseKey: "OPEN-SOURCE-GPLV3-LICENSE"
+      });
+		});
+	</script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 const path = require("path")
+const webpack = require("webpack")
 
 module.exports = {
 	entry: "./src/index.js",
@@ -12,19 +13,24 @@ module.exports = {
 	},
 	module: {
 		rules: [
+		// {
+  //     test: /\.js$/,
+  //     exclude: /(node_modules)/,
+  //     use: {
+  //       loader: 'babel-loader'
+  //     }
+  //   },
       {
         test: /\.exec\.js$/,
         use: [ 'script-loader' ]
-      },
-      {
+      },{
         test:/\.(s*)css$/,
         use: [
         {loader: 'style-loader'},
         {loader: 'css-loader'},
         {loader: 'sass-loader'}
         ]
-      },
-			{
+      },{
         test: /\.(png|jp(e*)g|svg)$/,
         use: [{
           loader: 'url-loader',

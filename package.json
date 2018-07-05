@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production && webpack-dev-server",
-    "dev": "webpack-dev-server"
+    "dev": "webpack --mode development && webpack-dev-server --mode development"
   },
   "author": "Chris Jiang",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
     "bourbon": "^5.0.1",
     "script-loader": "^0.7.2",
     "webpack": "^4.14.0",
@@ -20,7 +23,7 @@
     "file-loader": "^1.1.11",
     "fullpage.js": "^3.0.1",
     "jquery": "^3.3.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.1",
     "normalize-scss": "^7.0.1",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
