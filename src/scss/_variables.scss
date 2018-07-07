@@ -11,7 +11,12 @@ $violet: #BBA4D8;
 // Fonts & Sizes
 @import url('https://fonts.googleapis.com/css?family=Anton|Lato|Raleway');
 
-$fs-h1: regular 10rem 'Anton', sans-serif;
-$fs-h2: light 9rem 'Lato', sans-serif;
-$fs-p: regular 1.5rem 'Raleway', sans-serif;
-
+h1 {
+  font: 400 7rem 'Anton', sans-serif;
+}
+h2 {
+  font: 200 5.5rem 'Lato', sans-serif;
+}
+p {
+  font: 400 1.3rem 'Raleway', sans-serif;
+}

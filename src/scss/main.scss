@@ -1,11 +1,107 @@
-.section {
-	.violet {
-		background-color: $dark-violet;
-	}
-	.teal {
-		background-color: $dark-teal;
-	}
-	.red {
-		background-color: $dark-red;
-	}
+//Local Vars
+$box-width: 40%;
+$box-height: 85%;
+
+//bg boxes
+%box {
+  height: $box-height;
+  left: (100%-$box-width)/2;
+  position: absolute;
+  top: (100%-$box-height)/2;
+  width: $box-width;
+  z-index: -10;
+}
+.box-violet {
+  @extend %box;
+	background-color: $dark-violet;
+}
+.box-teal {
+  @extend %box;
+	background-color: $dark-teal;
+}
+.box-red {
+  @extend %box;
+	background-color: $dark-red;
+}
+
+//header fonts
+%main-header {
+  position: absolute;
+  top: 5%;
+}
+.h1-violet {
+  @extend %main-header;
+  color: $violet;
+  left: 6.4%;
+}
+.h1-teal {
+  @extend %main-header;
+  color: $teal;
+  right: 36%;
+}
+.sub-header {
+  top: 22%;
+  left: (100%-$box-width)/2;
+  position: absolute;
+  transform: translateX(-50%);
+
+  &.sh-right {
+    left: auto;
+    right: (100%-$box-width)/2;
+    transform: translateX(46%);
+  }
+  span {
+    padding: 0 1rem;
+  }
+  .h2-white {
+    color: white;
+  }
+  .h2-violet {
+    color: $dark-violet;
+  }
+  .h2-teal {
+    color: $dark-teal;
+  }
+}
+.description {
+  position: absolute;
+  top: 43%;
+  right: 72%;
+  text-align: right;
+
+  &.d-right {
+    left: 72%;
+    right: auto;
+    text-align: left;
+  }
+}
+
+//bg imgs
+%bg-img {
+  height: 100%;
+  position: absolute;
+  z-index: -5;
+}
+#longboard {
+  @extend %bg-img;
+  background: url('../imgs/Longboard.png') no-repeat;
+  background-size: 100%;
+  left: 40%;
+  top: 0;
+  width: 33%;
+}
+#bob-ross {
+  @extend %bg-img;
+  background: url('../imgs/Bob Ross.png') no-repeat;
+  background-size: 100%;
+  left: 20%;
+  top: 34%;
+  width: 40%;
+}
+
+.floaty {
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  background-color: white;
 }

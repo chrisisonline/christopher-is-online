@@ -10,4 +10,3 @@ import './scss/_main-style.scss'
 import $ from 'jQuery'
 window.jQuery = $;
 window.$ = $;
-import 'fullpage.js'
