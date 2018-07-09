@@ -25,55 +25,70 @@ $box-height: 85%;
 }
 
 //header fonts
-%main-header {
+.header-text {
   position: absolute;
-  top: 5%;
+  top: 13%;
+  right: 70%;
+
+}
+.header-text-right {
+  @extend .header-text;
+  right: auto;
+  left: 70%;
+}
+
+%main-header {
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
 }
 .h1-violet {
   @extend %main-header;
   color: $violet;
-  left: 6.4%;
 }
 .h1-teal {
   @extend %main-header;
   color: $teal;
-  right: 36%;
+  text-align: left;
 }
-.sub-header {
-  top: 22%;
-  left: (100%-$box-width)/2;
-  position: absolute;
-  transform: translateX(-50%);
+.h1-red {
+  @extend %main-header;
+  color: $red;
+}
 
-  &.sh-right {
-    left: auto;
-    right: (100%-$box-width)/2;
-    transform: translateX(46%);
-  }
-  span {
-    padding: 0 1rem;
-  }
-  .h2-white {
-    color: white;
-  }
-  .h2-violet {
-    color: $dark-violet;
-  }
-  .h2-teal {
-    color: $dark-teal;
-  }
+%sub-header {
+  margin: 0;
+  float: right;
+  white-space: nowrap;
 }
+.h2-white {
+  color: white;
+}
+.h2-violet {
+  @extend %sub-header;
+  color: $dark-violet;
+}
+.h2-teal {
+  @extend %sub-header;
+  color: $dark-teal;
+}
+.h2-red {
+  @extend %sub-header;
+  color: $dark-red;
+}
+
 .description {
+  padding: 0 2rem;
   position: absolute;
-  top: 43%;
-  right: 72%;
+  right: 50% + ($box-width/2);
   text-align: right;
-
-  &.d-right {
-    left: 72%;
-    right: auto;
-    text-align: left;
-  }
+  top: 13%;
+}
+.description-right {
+  @extend .description;
+  left: 50% + ($box-width/2);
+  right: auto;
+  text-align: left;
 }
 
 //bg imgs
@@ -95,6 +110,14 @@ $box-height: 85%;
   background: url('../imgs/Bob Ross.png') no-repeat;
   background-size: 100%;
   left: 20%;
+  top: 34%;
+  width: 40%;
+}
+#type-writer {
+  @extend %bg-img;
+  background: url('../imgs/Typewriter.png') no-repeat;
+  background-size: 100%;
+  left: 40%;
   top: 34%;
   width: 40%;
 }

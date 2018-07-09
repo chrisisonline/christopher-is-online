@@ -5,43 +5,75 @@
 </head>
 <body>
   <div class="floaty"><p>Floater</p></div>
+
 	<div id="fullpage">
-		<div class="section">
+
+	<div class="section">
+
+    <div class="header-text">
       <h1 class="h1-violet">WHAT I CAN DO</h1>
-      <h2 class="sub-header"><span class="h2-violet">FOR</span><span class="h2-white">YOU</span></h2>
-      <div class="box-violet"></div>
-      <div id="longboard"></div>
-      <div class="description">
-        <p>create clean & functional User Interfaces, <br>
-           design intuitive & intellegent User Experiences, <br>
-           develop fast & responsive Websites, <br>
-           stay on a longboard, <br>
-           and tell you my name. (pssst, it's Chris) <br>
-        </p>
-      </div>
+      <h2 class="h2-violet" id="for-you">FOR &nbsp <span class="h2-white">YOU</span></h2>
     </div>
-		<div class="section">
+
+    <div class="box-violet"></div>
+
+    <div id="longboard"></div>
+
+    <div class="description">
+      <p>create clean & functional User Interfaces, <br>
+         design intuitive & intellegent User Experiences, <br>
+         develop fast & responsive Websites, <br>
+         stay on a longboard, <br>
+         and tell you my name. (pssst, it's Chris) <br>
+      </p>
+    </div>
+  </div>
+
+	<div class="section">
+    <div class="header-text-right">
       <h1 class="h1-teal">UI & UX</h1>
-      <h2 class="sub-header sh-right"><span class="h2-white">GRAPHIC</span><span class="h2-teal">DESIGN</span></h2>
-      <div class="box-teal"></div>
-      <div id="bob-ross"></div>
-      <div class="description d-right">
-        <p>create clean & functional User Interfaces, <br>
-           design intuitive & intellegent User Experiences, <br>
-           develop fast & responsive Websites, <br>
-           stay on a longboard, <br>
-           and tell you my name. (pssst, it's Chris) <br>
-        </p>
-      </div>
+      <h2 class="h2-teal" id="graphic-design"><span class="h2-white">GRAPHIC</span> &nbsp DESIGN</h2>
     </div>
-		<div class="section">
-      <div class="box-red"></div>
+
+    <div class="box-teal"></div>
+
+    <div id="bob-ross"></div>
+
+    <div class="description-right">
+      <p>A picture is worth it's weight in gold... or something like that. <br>
+      I'm not afraid of using new tools, in fact I always welcome an oppertunity to find something better. <br>
+      </p>
     </div>
+
+  </div>
+
+	<div class="section">
+    <div class="header-text">
+      <h1 class="h1-red">FRONT-END</h1>
+      <h2 class="h2-red" id="for-you">WEB &nbsp <span class="h2-white">DEV</span></h2>
+    </div>
+
+    <div class="box-red"></div>
+
+    <div id="type-writer"></div>
+
+    <div class="description">
+      <p>create clean & functional User Interfaces, <br>
+         design intuitive & intellegent User Experiences, <br>
+         develop fast & responsive Websites, <br>
+         stay on a longboard, <br>
+         and tell you my name. (pssst, it's Chris) <br>
+      </p>
+    </div>
+  </div>
+
 		<div class="section">
       <div class="box-violet"></div>
     </div>
 	</div>
   <script src="./bundle.js"></script>
+
+  <!-- Can't import fullpage via webpack for whatever reason -->
 	<script src="./fullpage.js"></script>
 	<script>
 		$(document).ready(function() {
