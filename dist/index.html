@@ -1,76 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>webpack</title>
+	<title>Chris is Online</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
-  <div class="floaty"><p>Floater</p></div>
-
-	<div id="fullpage">
-
-	<div class="section">
-
-    <div class="header-text">
-      <h1 class="h1-violet">WHAT I CAN DO</h1>
-      <h2 class="h2-violet" id="for-you">FOR &nbsp <span class="h2-white">YOU</span></h2>
-    </div>
-
-    <div class="box-violet"></div>
-
-    <div id="longboard"></div>
-
-    <div class="description">
-      <p>create clean & functional User Interfaces, <br>
-         design intuitive & intellegent User Experiences, <br>
-         develop fast & responsive Websites, <br>
-         stay on a longboard, <br>
-         and tell you my name. (pssst, it's Chris) <br>
-      </p>
-    </div>
+  <div id="loading-screen">
+    <div class="spinner" uk-spinner="ratio: 4"></div>
   </div>
+  <div class="uk-offcanvas-content">
 
-	<div class="section">
-    <div class="header-text-right">
-      <h1 class="h1-teal">UI & UX</h1>
-      <h2 class="h2-teal" id="graphic-design"><span class="h2-white">GRAPHIC</span> &nbsp DESIGN</h2>
+    <button class="floaty uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-usage"><span uk-icon="menu"></span></button>
+
+    <div id="fullpage">
+      <div class="section">
+        <div class="header-text">
+          <h1 class="h1-violet">WHAT I CAN DO</h1>
+          <h2 class="h2-violet" id="for-you">FOR &nbsp <span class="h2-white">YOU</span></h2>
+        </div>
+
+        <div class="box-violet"></div>
+
+        <div id="longboard"></div>
+
+        <div class="description">
+          <p>create clean & functional User Interfaces, <br>
+             design intuitive & intellegent User Experiences, <br>
+             develop fast & responsive Websites, <br>
+             stay on a longboard, <br>
+             and tell you my name. (pssst, it's Chris) <br>
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="header-text-right">
+          <h1 class="h1-teal">UI & UX</h1>
+          <h2 class="h2-teal" id="graphic-design"><span class="h2-white">GRAPHIC</span> &nbsp DESIGN</h2>
+        </div>
+
+        <div class="box-teal"></div>
+
+        <div id="bob-ross"></div>
+
+        <div class="description-right">
+          <p>
+            A picture is worth it's weight in gold... or something like that. <br>
+            I'm not afraid of using new tools, in fact I always welcome an oppertunity to find something better. <br>
+          </p>
+          <p>
+            <span class="skill-tag-teal">Illustrator</span>
+            <span class="skill-tag-teal">InDesign</span>
+            <span class="skill-tag-teal">Photoshop</span>
+            <span class="skill-tag-teal">Sketch</span>
+            <span class="skill-tag-teal">InVision</span>
+            <span class="skill-tag-teal">Figma</span>
+            <span class="skill-tag-teal">Adobe XD</span>
+            <span class="skill-tag-teal">MS Paint*</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="header-text">
+          <h1 class="h1-red">FRONT-END</h1>
+          <h2 class="h2-red" id="for-you">WEB &nbsp <span class="h2-white">DEV</span></h2>
+        </div>
+
+        <div class="box-red"></div>
+
+        <div id="type-writer"></div>
+
+        <div class="description">
+          <p>
+            Just like a Möbius strip, there's no end in site when learning web technologies.<br>
+             Fortunately,I started with the fundamentals, so if all else fails I'll still get something out there.<br>
+          </p>
+          <p>
+            <span class="skill-tag-red">HTML</span>
+            <span class="skill-tag-red">CSS</span>
+            <span class="skill-tag-red">JavaScript</span>
+            <span class="skill-tag-red">jQuery</span>
+            <span class="skill-tag-red">Git</span>
+            <span class="skill-tag-red">Flask</span>
+            <span class="skill-tag-red">Jinja 2</span>
+            <span class="skill-tag-red">Handlebars</span>
+            <span class="skill-tag-red">Yarn</span>
+            <span class="skill-tag-red">Webpack</span>
+            <span class="skill-tag-red">Node.js</span>
+            <span class="skill-tag-red">Gulp.js</span>
+            <span class="skill-tag-red">Grunt.js</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h1 style="position: absolute;
+                   top: 40%;
+                   left: 50%;
+                   transform: translateX(-50%);">
+          Too be announced
+        </h1>
+      </div>
     </div>
 
-    <div class="box-teal"></div>
+    <!-- This is an anchor toggling the off-canvas -->
+    <a href="#offcanvas-usage" uk-toggle></a>
 
-    <div id="bob-ross"></div>
+    <!-- This is the off-canvas -->
+    <div id="offcanvas-usage" uk-offcanvas="flip: true; mode: reveal; overlay: true">
+        <div class="uk-offcanvas-bar">
 
-    <div class="description-right">
-      <p>A picture is worth it's weight in gold... or something like that. <br>
-      I'm not afraid of using new tools, in fact I always welcome an oppertunity to find something better. <br>
-      </p>
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        </div>
     </div>
+  </div> <!-- uk-off-canvas -->
 
-  </div>
-
-	<div class="section">
-    <div class="header-text">
-      <h1 class="h1-red">FRONT-END</h1>
-      <h2 class="h2-red" id="for-you">WEB &nbsp <span class="h2-white">DEV</span></h2>
-    </div>
-
-    <div class="box-red"></div>
-
-    <div id="type-writer"></div>
-
-    <div class="description">
-      <p>create clean & functional User Interfaces, <br>
-         design intuitive & intellegent User Experiences, <br>
-         develop fast & responsive Websites, <br>
-         stay on a longboard, <br>
-         and tell you my name. (pssst, it's Chris) <br>
-      </p>
-    </div>
-  </div>
-
-		<div class="section">
-      <div class="box-violet"></div>
-    </div>
-	</div>
   <script src="./bundle.js"></script>
 
   <!-- Can't import fullpage via webpack for whatever reason -->

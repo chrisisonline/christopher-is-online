@@ -1,6 +1,34 @@
-//Local Vars
+//local variables
 $box-width: 40%;
 $box-height: 85%;
+
+// loading screen
+#loading-screen {
+  background-color: $violet;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+
+  .spinner {
+    left: 50%;
+    @include prefixer(transform, translate(-50%, -50%), ("webkit", "moz"));
+    position: absolute;
+    top: 50%;
+  }
+}
+
+//off-canvas btn (sidebar)
+.floaty {
+  background-color: darken(white, 5);
+  border: none;
+  border-radius: 4rem;
+  line-height: 1;
+  padding: 1rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 5;
+}
 
 //bg boxes
 %box {
@@ -22,73 +50,6 @@ $box-height: 85%;
 .box-red {
   @extend %box;
 	background-color: $dark-red;
-}
-
-//header fonts
-.header-text {
-  position: absolute;
-  top: 13%;
-  right: 70%;
-
-}
-.header-text-right {
-  @extend .header-text;
-  right: auto;
-  left: 70%;
-}
-
-%main-header {
-  margin: 0;
-  text-align: right;
-  white-space: nowrap;
-}
-.h1-violet {
-  @extend %main-header;
-  color: $violet;
-}
-.h1-teal {
-  @extend %main-header;
-  color: $teal;
-  text-align: left;
-}
-.h1-red {
-  @extend %main-header;
-  color: $red;
-}
-
-%sub-header {
-  margin: 0;
-  float: right;
-  white-space: nowrap;
-}
-.h2-white {
-  color: white;
-}
-.h2-violet {
-  @extend %sub-header;
-  color: $dark-violet;
-}
-.h2-teal {
-  @extend %sub-header;
-  color: $dark-teal;
-}
-.h2-red {
-  @extend %sub-header;
-  color: $dark-red;
-}
-
-.description {
-  padding: 0 2rem;
-  position: absolute;
-  right: 50% + ($box-width/2);
-  text-align: right;
-  top: 13%;
-}
-.description-right {
-  @extend .description;
-  left: 50% + ($box-width/2);
-  right: auto;
-  text-align: left;
 }
 
 //bg imgs
@@ -117,14 +78,97 @@ $box-height: 85%;
   @extend %bg-img;
   background: url('../imgs/Typewriter.png') no-repeat;
   background-size: 100%;
-  left: 40%;
+  left: 37%;
   top: 34%;
-  width: 40%;
+  width: 48%;
 }
 
-.floaty {
-  position: fixed;
-  top: 3rem;
-  right: 3rem;
-  background-color: white;
+//header box
+.header-text {
+  position: absolute;
+  top: 13%;
+  right: 70%;
+}
+.header-text-right {
+  @extend .header-text;
+  right: auto;
+  left: 70%;
+}
+
+//bold header
+%main-header {
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+.h1-violet {
+  @extend %main-header;
+  color: $violet;
+}
+.h1-teal {
+  @extend %main-header;
+  color: $teal;
+  text-align: left;
+}
+.h1-red {
+  @extend %main-header;
+  color: $red;
+}
+
+//thin header (subheader)
+%sub-header {
+  margin: 0;
+  float: right;
+  white-space: nowrap;
+}
+.h2-white {
+  color: white;
+}
+.h2-violet {
+  @extend %sub-header;
+  color: $dark-violet;
+}
+.h2-teal {
+  @extend %sub-header;
+  color: $dark-teal;
+}
+.h2-red {
+  @extend %sub-header;
+  color: $dark-red;
+}
+
+//paragraph
+.description {
+  padding: 0 2rem;
+  position: absolute;
+  right: 50% + ($box-width/2);
+  text-align: right;
+  top: 13%;
+}
+.description-right {
+  @extend .description;
+  left: 50% + ($box-width/2);
+  right: auto;
+  text-align: left;
+}
+
+//skill tags
+%skill-tag {
+  $tag-gap: 0.5rem;
+  $tag-pad: 1rem;
+
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  margin: $tag-gap $tag-gap 0 0;
+  padding: 0.5*$tag-pad $tag-pad;
+  font-size: 1rem;
+}
+.skill-tag-teal {
+  @extend %skill-tag;
+  background-color: $dark-teal;
+}
+.skill-tag-red {
+  @extend %skill-tag;
+  background-color: $dark-red;
 }

@@ -1,7 +1,10 @@
+//bourbon
+@import "_bourbon";
+
 // uikit
-@import "uikit/variables-theme.scss";
-@import "uikit/mixins-theme.scss";
-@import "uikit/uikit-theme.scss";
+@import "uikit/variables-theme";
+@import "uikit/mixins-theme";
+@import "uikit/uikit-theme";
 
 @import '_variables';
 
