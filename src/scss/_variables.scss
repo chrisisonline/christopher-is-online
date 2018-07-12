@@ -9,13 +9,13 @@ $dark-violet: #604577;
 $violet: #BBA4D8;
 
 // Fonts & Sizes
-@import url('https://fonts.googleapis.com/css?family=Anton|Lato|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Anton|Lato:300,400|Raleway');
 
 h1 {
   font: 400 7rem 'Anton', sans-serif;
 }
 h2 {
-  font: 200 5.5rem 'Lato', sans-serif;
+  font: 300 5.5rem 'Lato', sans-serif;
 }
 p {
   font: 400 1.3rem 'Raleway', sans-serif;
