@@ -23,10 +23,6 @@ $(document).ready(function() {
     $(".uk-offcanvas-content").css('visibility', 'visible');
   }, 1337);
 
-  //img src's for webpack to serve
-  $("#longboard").attr('src', '../imgs/Longboard.png');
-
-
   // aligns on load & recalculate on resize
   alignHeaders();
   alignDescription();
