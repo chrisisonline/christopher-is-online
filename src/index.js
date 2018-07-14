@@ -20,7 +20,12 @@ $(document).ready(function() {
   // Removes the artificial loading-screen after l33t miliseconds
   setTimeout(function(){
     $("#loading-screen").fadeOut();
+    $(".uk-offcanvas-content").css('visibility', 'visible');
   }, 1337);
+
+  //img src's for webpack to serve
+  $("#longboard").attr('src', '../imgs/Longboard.png');
+
 
   // aligns on load & recalculate on resize
   alignHeaders();
