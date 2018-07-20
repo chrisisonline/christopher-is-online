@@ -6,7 +6,8 @@ import '../node_modules/fullpage.js/dist/fullpage.css'
 import './scss/_main-style.scss'
 
 // javascript assets
-import $ from 'jQuery'
+import 'handlebars';
+import $ from 'jQuery';
 window.jQuery = $;
 window.$ = $;
 import UIkit from 'uikit';

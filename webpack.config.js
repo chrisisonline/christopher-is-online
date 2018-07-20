@@ -41,7 +41,16 @@ module.exports = {
         }]
       }
 		]
-	}/*,
+	},
+  node: {
+     fs: "empty"
+  },
+  resolve: {
+    alias: {
+      'handlebars' : 'handlebars/dist/handlebars.js'
+    }
+  },
+  /*,
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
