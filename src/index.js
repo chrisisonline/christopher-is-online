@@ -20,9 +20,8 @@ $(document).ready(function() {
 
   // Removes the artificial loading-screen after l33t miliseconds
   setTimeout(function(){
-    $("#loading-screen").fadeOut();
-    $(".uk-offcanvas-content").css('visibility', 'visible');
-  }, 1337);
+    $("#fullpage").css('visibility', 'visible');
+  }, 100);
 
   // aligns on load & recalculate on resize
   alignHeaders();

@@ -9,123 +9,121 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
-  <!-- Loading screen -->
-  <div id="loading-screen">
-    <div class="spinner" uk-spinner="ratio: 4"></div>
-  </div>
-
-  <div class="uk-offcanvas-content">
-
-    <button class="floaty uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-usage"><span uk-icon="menu"></span></button>
-
-    <div id="fullpage">
-      <div class="section">
-        <div class="header-text">
-          <h1 class="h1-violet">WHAT I CAN DO</h1>
-          <h2 class="h2-violet" id="for-you">FOR &nbsp <span class="h2-white">YOU</span></h2>
-        </div>
-
-        <div class="box-violet"></div>
-
-        <div id="longboard"></div>
-
-        <div class="description">
-          <p>create clean & functional User Interfaces, <br>
-             design intuitive & intellegent User Experiences, <br>
-             develop fast & responsive Websites, <br>
-             stay on a longboard, <br>
-             and tell you my name. (pssst, it's Chris) <br>
-          </p>
-        </div>
+  <!-- displayed pages -->
+  <div id="fullpage">
+    <div class="section" id="landing">
+      <div class="header-text">
+        <h1 class="h1-violet">WHAT I CAN DO</h1>
+        <h2 class="h2-violet" id="for-you">FOR &nbsp <span class="h2-white">YOU</span></h2>
       </div>
 
-      <div class="section">
-        <div class="header-text-right">
-          <h1 class="h1-teal">UI & UX</h1>
-          <h2 class="h2-teal" id="graphic-design"><span class="h2-white">GRAPHIC</span> &nbsp DESIGN</h2>
-        </div>
+      <div class="box-violet"></div>
 
-        <div class="box-teal"></div>
+      <div id="longboard"></div>
 
-        <div id="bob-ross"></div>
-
-        <div class="description-right">
-          <p>
-            A picture is worth it's weight in gold... or something like that. <br>
-            I'm not afraid of using new tools, in fact I always welcome an oppertunity to find something better. <br>
-          </p>
-          <p>
-            <span class="skill-tag-teal">Illustrator</span>
-            <span class="skill-tag-teal">InDesign</span>
-            <span class="skill-tag-teal">Photoshop</span>
-            <span class="skill-tag-teal">Sketch</span>
-            <span class="skill-tag-teal">InVision</span>
-            <span class="skill-tag-teal">Figma</span>
-            <span class="skill-tag-teal">Adobe XD</span>
-            <span class="skill-tag-teal">MS Paint*</span>
-          </p>
-          <p class="uk-text-meta">*Please don't make me use MS Paint...</p>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="header-text">
-          <h1 class="h1-red">FRONT-END</h1>
-          <h2 class="h2-red" id="for-you">WEB &nbsp <span class="h2-white">DEV</span></h2>
-        </div>
-
-        <div class="box-red"></div>
-
-        <div id="type-writer"></div>
-
-        <div class="description">
-          <p>
-            Just like a Möbius strip, there's no end in sight when learning web technologies.<br>
-             Fortunately, I started with the fundamentals, so if all else fails I'll still get something out there.<br>
-          </p>
-          <p>
-            <span class="skill-tag-red">HTML</span>
-            <span class="skill-tag-red">CSS</span>
-            <span class="skill-tag-red">JavaScript</span>
-            <span class="skill-tag-red">jQuery</span>
-            <span class="skill-tag-red">Git</span>
-            <span class="skill-tag-red">Flask</span>
-            <span class="skill-tag-red">Jinja 2</span>
-            <span class="skill-tag-red">Handlebars</span>
-            <span class="skill-tag-red">Yarn</span>
-            <span class="skill-tag-red">Webpack</span>
-            <span class="skill-tag-red">Node.js</span>
-            <span class="skill-tag-red">Gulp.js</span>
-            <span class="skill-tag-red">Grunt.js</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="section">
-        <h1 style="position: absolute;
-                   top: 40%;
-                   left: 50%;
-                   transform: translateX(-50%);
-                   white-space: nowrap;">
-          Too be announced
-        </h1>
+      <div class="description">
+        <p>create clean & functional User Interfaces, <br>
+           design intuitive & intellegent User Experiences, <br>
+           develop fast & responsive Websites, <br>
+           study Systems Design Engineering, <br>
+           stay on a longboard, <br>
+           and tell you my name. (pssst, it's Chris) <br>
+        </p>
       </div>
     </div>
 
-    <!-- This is an anchor toggling the off-canvas -->
-    <a href="#offcanvas-usage" uk-toggle></a>
+    <div class="section" id="uiux-design">
+      <div class="header-text-right">
+        <h1 class="h1-teal">UI & UX</h1>
+        <h2 class="h2-teal" id="graphic-design"><span class="h2-white">GRAPHIC</span> &nbsp DESIGN</h2>
+      </div>
 
-    <!-- This is the off-canvas -->
-    <div id="offcanvas-usage" uk-offcanvas="flip: true; mode: reveal; overlay: true">
-        <div class="uk-offcanvas-bar">
+      <div class="box-teal"></div>
 
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <div id="bob-ross"></div>
 
-        </div>
+      <div class="description-right">
+        <p>
+          A picture is worth it's weight in gold... or something like that. <br>
+          I'm not afraid of using new tools, in fact I always welcome an oppertunity to find something better. <br>
+        </p>
+        <p>
+          <span class="skill-tag-teal">Illustrator</span>
+          <span class="skill-tag-teal">InDesign</span>
+          <span class="skill-tag-teal">Photoshop</span>
+          <span class="skill-tag-teal">Sketch</span>
+          <span class="skill-tag-teal">InVision</span>
+          <span class="skill-tag-teal">Figma</span>
+          <span class="skill-tag-teal">Adobe XD</span>
+          <span class="skill-tag-teal">MS Paint*</span>
+        </p>
+        <p class="uk-text-meta">*Please don't make me use MS Paint...</p>
+      </div>
     </div>
-  </div> <!-- uk-off-canvas -->
+
+    <div class="section" id="web-dev">
+      <div class="header-text">
+        <h1 class="h1-red">FRONT-END</h1>
+        <h2 class="h2-red" id="for-you">WEB &nbsp <span class="h2-white">DEV</span></h2>
+      </div>
+
+      <div class="box-red"></div>
+
+      <div id="type-writer"></div>
+
+      <div class="description">
+        <p>
+          Just like a Möbius strip, there's no end in sight when learning web technologies.<br>
+           Fortunately, I started with the fundamentals, so if all else fails I'll still get something out there.<br>
+        </p>
+        <p>
+          <span class="skill-tag-red">HTML</span>
+          <span class="skill-tag-red">CSS</span>
+          <span class="skill-tag-red">JavaScript</span>
+          <span class="skill-tag-red">jQuery</span>
+          <span class="skill-tag-red">Git</span>
+          <span class="skill-tag-red">Flask</span>
+          <span class="skill-tag-red">Jinja 2</span>
+          <span class="skill-tag-red">Handlebars</span>
+          <span class="skill-tag-red">Yarn</span>
+          <span class="skill-tag-red">Webpack</span>
+          <span class="skill-tag-red">Node.js</span>
+          <span class="skill-tag-red">Gulp. js</span>
+          <span class="skill-tag-red">Grunt.js</span>
+          <span class="skill-tag-red">Docker</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="section" id="contact">
+      <div class="icon-container">
+        <a href="https://www.linkedin.com/in/christopherjiang/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/chrisisonline">
+          <i class="fab fa-github-square"></i>
+        </a>
+        <a href="mailto:ChristopherJiang@outlook.com?Subject=Hey%20Chris">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="section" id="more">
+      <h1 style="text-align: center;
+                 line-height: 9rem;
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-50%, -50%);
+                 ">
+        Site under development!
+      </h1>
+    </div>
+  </div> <!-- displayed pages END -->
 
   <script src="./bundle.js"></script>
 
@@ -134,6 +132,8 @@
 	<script>
 		$(document).ready(function() {
       $("#fullpage").fullpage({
+        anchors:['page1', 'page2', 'page3', 'page4', 'page5'],
+        menu: '#side-menu',
         licenseKey: "OPEN-SOURCE-GPLV3-LICENSE"
       });
 		});

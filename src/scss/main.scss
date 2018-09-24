@@ -18,7 +18,7 @@ $box-height: 85%;
 }
 
 //keep body hidden untill loader fades
-.uk-offcanvas-content {
+#fullpage {
   visibility: hidden;
 }
 
@@ -179,4 +179,26 @@ $box-height: 85%;
 .skill-tag-red {
   @extend %skill-tag;
   background-color: $dark-red;
+}
+
+//links
+.icon-container {
+  display: inline-block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  a {
+    color: transparent;
+  }
+
+  i {
+    color: $dark-violet;
+    font-size: 8rem;
+    padding: 3rem;
+    transition: all 0.4s;
+    &:hover {
+      color: $violet;
+    }
+  }
 }
