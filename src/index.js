@@ -18,18 +18,12 @@ UIkit.use(Icons);
 // custom script
 $(document).ready(function() {
 
-  //BETA WEBSITE WARNING
-  if (!localStorage['chrisisonline']) {
-       localStorage['chrisisonline'] = 'visited';
-       UIkit.alert('#beta-alert');
-   }
-
-  // Removes the artificial loading-screen after l33t miliseconds
+  // removes the artificial loading-screen after l33t miliseconds
   setTimeout(function(){
     $("#fullpage").css('visibility', 'visible');
-  }, 100);
+  }, 200);
 
-  // aligns on load & recalculate on resize
+  // aligns on load & recalculate on resize (only for desktop)
   alignHeaders();
   alignDescription();
   $(window).resize(function(){
@@ -37,8 +31,18 @@ $(document).ready(function() {
     alignDescription();
   });
 
-  // Aligns the subheader in the middle of the coloured box
+  // removes extra space in the description for mobile devices
+  if ($(window).width() < 1200) {
+    $('h2').each(function(){
+        $(this).html($(this).html().replace(/&nbsp;/gi,''));
+    });
+  }
+
+  // aligns the subheader in the middle of the coloured box
   function alignHeaders(){
+    if ($(window).width() < 1200)
+      return
+
     $('div[class^="header-text"]').each(function(){
       var halfWidth = $(this).children('h2').width() / 2;
       if ($(this).children('h2').attr('id') == "graphic-design"){
@@ -51,6 +55,9 @@ $(document).ready(function() {
     })
   }
   function alignDescription(){
+    if ($(window).width() < 1200)
+      return
+
     $('div[class^="description"]').each(function(){
       var parentHeight = $(this).siblings('div[class^="header-text"]').height();
       $(this).css('transform', 'translateY(' + (36 + parentHeight) + 'px)');

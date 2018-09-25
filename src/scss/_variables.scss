@@ -20,3 +20,22 @@ h2 {
 p {
   font: 400 1.3rem 'Raleway', sans-serif;
 }
+
+//Breakpoints
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (max-width: 1600px) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (max-width: 1400px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 1200px) { @content ; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 460px)  { @content ; }
+  }
+  @else if $point == xs-mobile {
+    @media (max-width: 340px)  { @content ; }
+  }
+}

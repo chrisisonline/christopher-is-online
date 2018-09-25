@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
-  <div uk-alert id="beta-alert">
+ <!--  <div uk-alert id="beta-alert">
     <a class="uk-alert-close" uk-close></a>
     <h3>Welcome! Just a heads up...</h3>
     <p>
@@ -20,7 +20,7 @@
       Unfortunately mobile support is not yet available, and there may be a couple of bugs.<br>
       <a href="http://christopherisonline.com">Go here for a older stable release!</a>
     </p>
-  </div>
+  </div> -->
   <!-- displayed pages -->
   <div id="fullpage">
     <div class="section" id="landing">
@@ -85,7 +85,7 @@
 
       <div class="description">
         <p>
-          Just like a Möbius strip, there's no end in sight when learning web technologies.<br>
+          Just like a Mobius strip, there's no end in sight when learning web technologies.<br>
            Fortunately, I started with the fundamentals, so if all else fails I'll still get something out there.<br>
         </p>
         <p>
@@ -109,9 +109,9 @@
 
     <div class="section" id="projects">
       <div class="project-container uk-grid-large" uk-grid>
-        <div class="uk-width-1-3@m">
+        <div class="uk-width-1-3@l">
           <div class="project-card">
-            <h1 class="h1-violet">POKÉMON</h1>
+            <h1 class="h1-violet">POKEMON</h1>
             <h2 class="h2-violet">WEB APP</h2>
             <div id="pokemon"></div>
           </div>
@@ -135,7 +135,7 @@
             <a href="http://christopherisonline.com/damagecalc/" class="btn-violet">Check it Out</a>
           </div>
         </div>
-        <div class="uk-width-1-3@m">
+        <div class="uk-width-1-3@l">
           <div class="project-card-reverse">
             <h1 class="h1-violet">RESUME</h1>
             <h2 class="h2-violet">DESIGN</h2>
@@ -144,7 +144,7 @@
           <p class="project-body">
             Using my older resumes as templates, I offer to help create and redesign CVs. <br>
             Beyond aesthetics, I also help organize their portfolio and advise people on best practices. <br>
-            I’ve worked with people across many disciplines and you can see some of the transformations online.
+            I've worked with people across many disciplines and you can see some of the transformations online.
           </p>
           <p class="project-tags">
             <span class="skill-tag-violet">InDesign</span>
@@ -154,7 +154,7 @@
             <a href="http://christopherisonline.com/cj-design/" class="btn-violet">Check it Out</a>
           </div>
         </div>
-        <div class="uk-width-1-3@m">
+        <div class="uk-width-1-3@l">
           <div class="project-card">
             <h1 class="h1-violet">PORTFOLIO</h1>
             <h2 class="h2-violet">WEBSITE</h2>
@@ -216,6 +216,8 @@
 	<script>
 		$(document).ready(function() {
       $("#fullpage").fullpage({
+        anchors: ['1', '2', '3', '4', '5'],
+        responsiveWidth: 1200,
         licenseKey: "OPEN-SOURCE-GPLV3-LICENSE"
       });
 		});
