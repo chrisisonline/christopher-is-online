@@ -67,7 +67,7 @@ $box-height: 85%;
   background: url('../imgs/Longboard.png') no-repeat;
   background-size: contain;
   right: 24%;
-  padding-top: 50%;
+  padding-top: 47%;
   top: 0;
   width: 33%;
 }
@@ -180,25 +180,109 @@ $box-height: 85%;
   @extend %skill-tag;
   background-color: $dark-red;
 }
+.skill-tag-violet {
+  @extend %skill-tag;
+  background-color: $dark-violet;
+}
+
+//project contrainer
+.project-container {
+  padding: 0 4rem;
+
+  .project-card {
+    display: inline-block;
+    position: relative;
+    height: 18rem;
+    width: 100%;
+
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 3.6rem;
+    }
+  }
+  .project-card-reverse {
+    @extend .project-card;
+    h1 {
+      text-align: left;
+    }
+    h2 {
+      float: left;
+    }
+  }
+  .project-body {
+    font-size: 1rem;
+  }
+  .project-tags {
+    //compensate for the tag margin-top
+    margin-top: -0.5rem;
+    .skill-tag-violet {
+      font-size: 0.7rem;
+    }
+  }
+  .project-btns {
+    display: block;
+    .btn-violet {
+      background-color: transparent;
+      border: 2px solid #604577;
+      border-radius: 0.3rem;
+      color: #604577;
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      text-decoration: none;
+      transition: all 0.4s;
+      margin-right: 1rem;
+      &:hover {
+        background-color: lighten($violet, 15);
+      }
+    }
+  }
+}
+#pokemon {
+  @extend %bg-img;
+  background: url('../imgs/Pokemon.png') no-repeat;
+  background-size: contain;
+  left: 0;
+  padding-top: 52%;
+  bottom: 0;
+  width: 50%;
+}
+#resume {
+  @extend %bg-img;
+  background: url('../imgs/Resume.png') no-repeat;
+  background-size: contain;
+  right: 0;
+  padding-top: 60%;
+  bottom: 0;
+  width: 72%;
+}
+#web-app {
+  @extend %bg-img;
+  background: url('../imgs/Website.png') no-repeat;
+  background-size: contain;
+  left: 0;
+  padding-top: 34%;
+  bottom: 0;
+  width: 61%;
+}
 
 //links
 .icon-container {
-  display: inline-block;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translatex(-50%);
   a {
     color: transparent;
   }
-
   i {
-    color: $dark-violet;
+    color: $dark-teal;
     font-size: 8rem;
-    padding: 3rem;
     transition: all 0.4s;
     &:hover {
-      color: $violet;
+      color: darken($teal, 15);
     }
   }
 }

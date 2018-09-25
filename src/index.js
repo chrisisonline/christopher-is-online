@@ -18,6 +18,12 @@ UIkit.use(Icons);
 // custom script
 $(document).ready(function() {
 
+  //BETA WEBSITE WARNING
+  if (!localStorage['chrisisonline']) {
+       localStorage['chrisisonline'] = 'visited';
+       UIkit.alert('#beta-alert');
+   }
+
   // Removes the artificial loading-screen after l33t miliseconds
   setTimeout(function(){
     $("#fullpage").css('visibility', 'visible');
