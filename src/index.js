@@ -21,12 +21,12 @@ $(document).ready(function() {
   // removes the artificial loading-screen after l33t miliseconds
   setTimeout(function(){
     $("#fullpage").css('visibility', 'visible');
+    alignHeaders();
+    alignDescription();
+    fixLinks();
   }, 400);
 
   // aligns on load & recalculate on resize (only for desktop)
-  alignHeaders();
-  alignDescription();
-  fixLinks();
   $(window).resize(function(){
     alignHeaders();
     alignDescription();
@@ -73,6 +73,7 @@ $(document).ready(function() {
       return $(this).width();
     });
     var sideWidth = $(window).width() - linkList[0] - linkList[3] - 40;
-    $('.icon-container').css('padding-left', (sideWidth / 2) + 'px');
+    $('.icon-container').css('transform', 'translateX(' +  (sideWidth / 2) + 'px');
+    $('.icon-container').css('left', '0');
   }
 });

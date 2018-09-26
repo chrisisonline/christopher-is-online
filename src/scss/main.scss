@@ -24,6 +24,9 @@ $box-height: 85%;
     overflow: hidden;
   }
 }
+#beta-alert {
+  z-index: 999;
+}
 
 //shorten landing on mobile
 @include breakpoint(mobile) {
@@ -115,7 +118,7 @@ $box-height: 85%;
     width: 65%;
   }
   @include breakpoint(mobile) {
-    top: 21%;
+    top: 15%;
   }
 }
 #type-writer {
@@ -136,7 +139,7 @@ $box-height: 85%;
   }
   @include breakpoint(mobile) {
     padding-top: 52%;
-    top: 21%;
+    top: 14%;
     right: -13%;
     width: 78%;
   }
@@ -172,6 +175,8 @@ $box-height: 85%;
     }
   }
   @include breakpoint(mobile) {
+    top: 5%;
+
     h1 {
       font-size: 3.2rem;
     }
@@ -289,10 +294,11 @@ $box-height: 85%;
     }
   }
   @include breakpoint(mobile){
-    top: 54%;
+    top: 50%;
 
     p {
       font-size: 1rem;
+      margin: 10px 0 0 0;
     }
   }
   @include breakpoint(mobile-xs){
