@@ -26,9 +26,11 @@ $(document).ready(function() {
   // aligns on load & recalculate on resize (only for desktop)
   alignHeaders();
   alignDescription();
+  fixLinks();
   $(window).resize(function(){
     alignHeaders();
     alignDescription();
+    fixLinks();
   });
 
   // removes extra space in the description for mobile devices
@@ -62,5 +64,15 @@ $(document).ready(function() {
       var parentHeight = $(this).siblings('div[class^="header-text"]').height();
       $(this).css('transform', 'translateY(' + (36 + parentHeight) + 'px)');
     });
+  }
+  function fixLinks(){
+    if ($(window).width() > 460)
+      return
+
+    var linkList = $('.contact-link').map(function(){
+      return $(this).width();
+    });
+    var sideWidth = $(window).width() - linkList[0] - linkList[3] - 40;
+    $('.icon-container').css('padding-left', (sideWidth / 2) + 'px');
   }
 });

@@ -20,7 +20,16 @@ $box-height: 85%;
 //keep body hidden untill loader fades
 #fullpage {
   visibility: hidden;
-  overflow: hidden;
+  @include breakpoint(tablet) {
+    overflow: hidden;
+  }
+}
+
+//shorten landing on mobile
+@include breakpoint(mobile) {
+  #landing {
+    margin-bottom: -12%;
+  }
 }
 
 //bg boxes
@@ -32,23 +41,20 @@ $box-height: 85%;
   width: $box-width;
   z-index: -10;
 
-  @include breakpoint(mobile){
-    height: 60%;
-  }
   @include breakpoint(tablet){
     height: 55%;
+    left: auto;
+    right: 0;
     top: 0;
     width: 55%;
+  }
+  @include breakpoint(mobile){
+    height: 45%;
   }
 }
 .box-violet {
   @extend %box;
 	background-color: $dark-violet;
-
-  @include breakpoint(tablet) {
-    left: auto;
-    right: 0;
-  }
 }
 .box-teal {
   @extend %box;
@@ -63,11 +69,6 @@ $box-height: 85%;
 .box-red {
   @extend %box;
 	background-color: $dark-red;
-
-  @include breakpoint(tablet) {
-    left: auto;
-    right: 0;
-  }
 }
 
 //bg imgs
@@ -80,27 +81,19 @@ $box-height: 85%;
   background: url('../imgs/Longboard.png') no-repeat;
   background-size: contain;
   right: 24%;
-  padding-top: 47%;
+  padding-top: 46%;
   top: 0;
-  width: 33%;
+  width: 32%;
 
-  @include breakpoint(mobile) {
-    right: -15%;
-    padding-top: 110%;
-    width: 75%;
-  }
   @include breakpoint(tablet) {
     right: 5%;
     padding-top: 78%;
     width: 53%;
   }
-}
-
-@media (max-width: 460px){
-  #longboard {
-    right: -15%;
-    padding-top: 110%;
-    width: 75%;
+  @include breakpoint(mobile) {
+    right: 0%;
+    padding-top: 95%;
+    width: 57%;
   }
 }
 
@@ -121,6 +114,9 @@ $box-height: 85%;
     top: 19%;
     width: 65%;
   }
+  @include breakpoint(mobile) {
+    top: 21%;
+  }
 }
 #type-writer {
   @extend %bg-img;
@@ -138,6 +134,12 @@ $box-height: 85%;
     right: 0;
     width: 74%;
   }
+  @include breakpoint(mobile) {
+    padding-top: 52%;
+    top: 21%;
+    right: -13%;
+    width: 78%;
+  }
 }
 
 //header box
@@ -146,6 +148,9 @@ $box-height: 85%;
   top: 13%;
   right: 70%;
 
+  @include breakpoint(latop-l) {
+    top: 10%;
+  }
   @include breakpoint(laptop) {
     h1 {
       font-size: 6rem;
@@ -166,6 +171,23 @@ $box-height: 85%;
       font-size: 4.5rem;
     }
   }
+  @include breakpoint(mobile) {
+    h1 {
+      font-size: 3.2rem;
+    }
+    h2 {
+      font-size: 2.1rem;
+    }
+  }
+  @include breakpoint(mobile-xs) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+
 }
 .header-text-right {
   @extend .header-text;
@@ -266,6 +288,18 @@ $box-height: 85%;
       font-size: 1.6rem;
     }
   }
+  @include breakpoint(mobile){
+    top: 54%;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+  @include breakpoint(mobile-xs){
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }
 .description-right {
   @extend .description;
@@ -283,6 +317,8 @@ $box-height: 85%;
 %skill-tag {
   $tag-gap: 0.5rem;
   $tag-pad: 1rem;
+  $tag-gap-l: $tag-gap - 0.2rem;
+  $tag-pad-l: $tag-pad - 0.2rem;
 
   border-radius: 8px;
   color: white;
@@ -291,13 +327,21 @@ $box-height: 85%;
   padding: 0.5*$tag-pad $tag-pad;
   font-size: 1rem;
 
-  @include breakpoint(laptop){
-    $tag-gap-l: $tag-gap - 0.2rem;
-    $tag-pad-l: $tag-pad - 0.2rem;
-
+  @include breakpoint(laptop-l) {
+    font-size: 0.8rem;
+  }
+  @include breakpoint(laptop) {
     font-size: 1rem;
     margin: $tag-gap-l $tag-gap-l 0 0;
     padding: 0.5*$tag-pad-l $tag-pad-l;
+  }
+  @include breakpoint(mobile) {
+    font-size: 0.6rem;
+    margin: $tag-gap-l $tag-gap-l 0 0;
+    padding: 0.5*$tag-pad-l $tag-pad-l;
+  }
+  @include breakpoint(mobile-xs) {
+    font-size: 0.56rem;
   }
 }
 .skill-tag-teal {

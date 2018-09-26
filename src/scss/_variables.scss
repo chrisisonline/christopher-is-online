@@ -23,7 +23,7 @@ p {
 
 //Breakpoints
 @mixin breakpoint($point) {
-  @if $point == desktop {
+  @if $point == laptop-l {
     @media screen and (max-width: 1600px) { @content ; }
   }
   @else if $point == laptop {
@@ -35,7 +35,7 @@ p {
   @else if $point == mobile {
     @media screen and (max-width: 460px) { @content ; }
   }
-  @else if $point == xs-mobile {
+  @else if $point == mobile-xs {
     @media screen and (max-width: 340px)  { @content ; }
   }
 }
