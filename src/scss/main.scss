@@ -268,7 +268,7 @@ $box-height: 85%;
   position: absolute;
   right: 50% + ($box-width/2);
   text-align: right;
-  top: 13%;
+  top: 10%;
 
   @include breakpoint(laptop){
     p {
