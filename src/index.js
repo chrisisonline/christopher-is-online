@@ -21,7 +21,7 @@ $(document).ready(function() {
   // removes the artificial loading-screen after l33t miliseconds
   setTimeout(function(){
     $("#fullpage").css('visibility', 'visible');
-  }, 200);
+  }, 400);
 
   // aligns on load & recalculate on resize (only for desktop)
   alignHeaders();

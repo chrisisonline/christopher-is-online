@@ -20,6 +20,7 @@ $box-height: 85%;
 //keep body hidden untill loader fades
 #fullpage {
   visibility: hidden;
+  overflow: hidden;
 }
 
 //bg boxes
@@ -31,8 +32,11 @@ $box-height: 85%;
   width: $box-width;
   z-index: -10;
 
+  @include breakpoint(mobile){
+    height: 60%;
+  }
   @include breakpoint(tablet){
-    height: 65%;
+    height: 55%;
     top: 0;
     width: 55%;
   }
@@ -80,12 +84,27 @@ $box-height: 85%;
   top: 0;
   width: 33%;
 
+  @include breakpoint(mobile) {
+    right: -15%;
+    padding-top: 110%;
+    width: 75%;
+  }
   @include breakpoint(tablet) {
-    right: 0%;
-    padding-top: 89%;
-    width: 61%;
+    right: 5%;
+    padding-top: 78%;
+    width: 53%;
   }
 }
+
+@media (max-width: 460px){
+  #longboard {
+    right: -15%;
+    padding-top: 110%;
+    width: 75%;
+  }
+}
+
+
 #bob-ross {
   @extend %bg-img;
   background: url('../imgs/Bob Ross.png') no-repeat;
@@ -99,7 +118,7 @@ $box-height: 85%;
     bottom: auto;
     left: -11%;
     padding-top: 52%;
-    top: 27%;
+    top: 19%;
     width: 65%;
   }
 }
@@ -115,7 +134,7 @@ $box-height: 85%;
   @include breakpoint(tablet) {
     bottom: auto;
     padding-top: 49%;
-    top: 30%;
+    top: 20%;
     right: 0;
     width: 74%;
   }
@@ -139,6 +158,13 @@ $box-height: 85%;
     top: 8%;
     right: 62%;
     width: 30%;
+
+    h1 {
+      font-size: 6rem;
+    }
+    h2 {
+      font-size: 4.5rem;
+    }
   }
 }
 .header-text-right {
@@ -230,14 +256,14 @@ $box-height: 85%;
   @include breakpoint(tablet){
     left: 50%;
     text-align: left;
-    top: 69%;
+    top: 62%;
     transform: translateX(-50%);
     right: auto;
     white-space: initial;
     width: 80%;
 
     p {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   }
 }
@@ -269,7 +295,7 @@ $box-height: 85%;
     $tag-gap-l: $tag-gap - 0.2rem;
     $tag-pad-l: $tag-pad - 0.2rem;
 
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: $tag-gap-l $tag-gap-l 0 0;
     padding: 0.5*$tag-pad-l $tag-pad-l;
   }

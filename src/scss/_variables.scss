@@ -24,18 +24,18 @@ p {
 //Breakpoints
 @mixin breakpoint($point) {
   @if $point == desktop {
-    @media (max-width: 1600px) { @content ; }
+    @media screen and (max-width: 1600px) { @content ; }
   }
   @else if $point == laptop {
-    @media (max-width: 1400px) { @content ; }
+    @media screen and (max-width: 1400px) and (min-width: 1200px) { @content ; }
   }
   @else if $point == tablet {
-    @media (max-width: 1200px) { @content ; }
+    @media screen and (max-width: 1200px) { @content ; }
   }
   @else if $point == mobile {
-    @media (max-width: 460px)  { @content ; }
+    @media screen and (max-width: 460px) { @content ; }
   }
   @else if $point == xs-mobile {
-    @media (max-width: 340px)  { @content ; }
+    @media screen and (max-width: 340px)  { @content ; }
   }
 }

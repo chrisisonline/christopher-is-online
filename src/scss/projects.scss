@@ -1,19 +1,27 @@
-[class*='uk-width'] {
-  @include breakpoint(tablet) {
-    margin: 6rem 15% 6rem;
-    width: 70%;
-  }
-}
-
 //project contrainer
 .project-container {
   padding: 0 4rem;
 
+  .project-element {
+    @include breakpoint(tablet) {
+      margin: 4rem 5%;
+      width: 90%;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
   .project-card {
     display: inline-block;
     position: relative;
     height: 18rem;
     width: 100%;
+
+    @include breakpoint(tablet) {
+      margin: 0 10%;
+      width: 80%;
+    }
 
     h1 {
       font-size: 5rem;
