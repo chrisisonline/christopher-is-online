@@ -18,6 +18,8 @@ UIkit.use(Icons);
 // custom script
 $(document).ready(function() {
 
+  UIkit.notification("<h3>Welcome! Just a heads up...</h3><p>My fancy new website is still under development. Please check my <a href='https://www.linkedin.com/in/christopherjiang/'>LinkedIn</a> for my full portfolio<br><a href='http://christopherisonline.com/legacy'>Go here for an older stable release!</a></p>");
+
   // removes the artificial loading-screen after l33t miliseconds
   setTimeout(function(){
     $("#fullpage").css('visibility', 'visible');
