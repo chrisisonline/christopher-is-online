@@ -78,15 +78,18 @@ $box-height: 85%;
 %bg-img {
   position: absolute;
   z-index: -5;
+
+  img {
+    width: auto;
+    max-height: 100%;
+  }
 }
+
 #longboard {
   @extend %bg-img;
-  background: url('../imgs/Longboard.png') no-repeat;
-  background-size: contain;
+  height: 96%;
   right: 24%;
-  padding-top: 46%;
   top: 0;
-  width: 32%;
 
   @include breakpoint(tablet) {
     right: 5%;
@@ -99,16 +102,11 @@ $box-height: 85%;
     width: 57%;
   }
 }
-
-
 #bob-ross {
   @extend %bg-img;
-  background: url('../imgs/Bob Ross.png') no-repeat;
-  background-size: contain;
   bottom: 1rem;
+  height: 65%;
   left: 20%;
-  padding-top: 30%;
-  width: 40%;
 
   @include breakpoint(tablet) {
     bottom: auto;
@@ -123,12 +121,9 @@ $box-height: 85%;
 }
 #type-writer {
   @extend %bg-img;
-  background: url('../imgs/Typewriter.png') no-repeat;
-  background-size: contain;
   bottom: 1rem;
+  height: 67%;
   right: 14%;
-  padding-top: 33%;
-  width: 50%;
 
   @include breakpoint(tablet) {
     bottom: auto;

@@ -1,4 +1,7 @@
 node_modules
 yarn\.lock
+dist/images
+dist/bundle\.js
 
 \.DS_Store
+
