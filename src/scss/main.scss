@@ -2,21 +2,6 @@
 $box-width: 40%;
 $box-height: 85%;
 
-// loading screen
-#loading-screen {
-  background-color: $violet;
-  height: 100%;
-  width: 100%;
-  z-index: 99;
-
-  .spinner {
-    left: 50%;
-    @include prefixer(transform, translate(-50%, -50%), ("webkit", "moz"));
-    position: absolute;
-    top: 50%;
-  }
-}
-
 //keep body hidden untill loader fades
 #fullpage {
   visibility: hidden;
@@ -24,14 +9,11 @@ $box-height: 85%;
     overflow: hidden;
   }
 }
-#beta-alert {
-  z-index: 999;
-}
 
 //shorten landing on mobile
 @include breakpoint(mobile) {
   #landing {
-    margin-bottom: -12%;
+    margin-bottom: -24%;
   }
 }
 
@@ -52,7 +34,7 @@ $box-height: 85%;
     width: 55%;
   }
   @include breakpoint(mobile){
-    height: 45%;
+    height: 40%;
   }
 }
 .box-violet {
@@ -92,14 +74,13 @@ $box-height: 85%;
   top: 0;
 
   @include breakpoint(tablet) {
-    right: 5%;
-    padding-top: 78%;
-    width: 53%;
+    height: 60%;
+    right: -5%;
   }
   @include breakpoint(mobile) {
-    right: 0%;
-    padding-top: 95%;
-    width: 57%;
+    right: -7%;
+    height: auto;
+    width: 60%;
   }
 }
 #bob-ross {
@@ -110,9 +91,9 @@ $box-height: 85%;
 
   @include breakpoint(tablet) {
     bottom: auto;
-    left: -11%;
-    padding-top: 52%;
-    top: 19%;
+    left: -10%;
+    height: auto;
+    top: 18%;
     width: 65%;
   }
   @include breakpoint(mobile) {
@@ -122,21 +103,19 @@ $box-height: 85%;
 #type-writer {
   @extend %bg-img;
   bottom: 1rem;
-  height: 67%;
-  right: 14%;
+  height: 65%;
+  right: 16%;
 
   @include breakpoint(tablet) {
     bottom: auto;
-    padding-top: 49%;
     top: 20%;
-    right: 0;
+    right: -10%;
     width: 74%;
   }
   @include breakpoint(mobile) {
-    padding-top: 52%;
-    top: 14%;
-    right: -13%;
-    width: 78%;
+    right: -16%;
+    top: 15%;
+    width: 82%;
   }
 }
 
@@ -151,7 +130,7 @@ $box-height: 85%;
   }
   @include breakpoint(laptop) {
     h1 {
-      font-size: 6rem;
+      font-size: 5.5rem;
     }
     h2 {
       font-size: 4.5rem;
@@ -326,13 +305,10 @@ $box-height: 85%;
   display: inline-block;
   margin: $tag-gap $tag-gap 0 0;
   padding: 0.5*$tag-pad $tag-pad;
-  font-size: 1rem;
+  font-size: 0.8rem;
 
-  @include breakpoint(laptop-l) {
-    font-size: 0.8rem;
-  }
   @include breakpoint(laptop) {
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin: $tag-gap-l $tag-gap-l 0 0;
     padding: 0.5*$tag-pad-l $tag-pad-l;
   }

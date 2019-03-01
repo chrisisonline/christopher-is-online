@@ -12,13 +12,13 @@ $violet: #BBA4D8;
 @import url('https://fonts.googleapis.com/css?family=Anton|Lato:300,400|Raleway');
 
 h1 {
-  font: 400 7rem 'Anton', sans-serif;
+  font: 400 6.8rem 'Anton', sans-serif;
 }
 h2 {
-  font: 300 5.5rem 'Lato', sans-serif;
+  font: 300 5.1rem 'Lato', sans-serif;
 }
 p {
-  font: 400 1.3rem 'Raleway', sans-serif;
+  font: 400 1.2rem 'Raleway', sans-serif;
 }
 
 //Breakpoints
@@ -38,4 +38,8 @@ p {
   @else if $point == mobile-xs {
     @media screen and (max-width: 340px)  { @content ; }
   }
+}
+
+@mixin transform() {
+  transition: 0.2s ease-in all;
 }
