@@ -34,7 +34,7 @@ $box-height: 85%;
     width: 55%;
   }
   @include breakpoint(mobile){
-    height: 40%;
+    height: 75vw;
   }
 }
 .box-violet {
@@ -78,9 +78,9 @@ $box-height: 85%;
     right: -5%;
   }
   @include breakpoint(mobile) {
-    right: -7%;
+    right: -4%;
     height: auto;
-    width: 60%;
+    width: 54%;
   }
 }
 #bob-ross {
@@ -97,7 +97,7 @@ $box-height: 85%;
     width: 65%;
   }
   @include breakpoint(mobile) {
-    top: 15%;
+    top: 26vw;
   }
 }
 #type-writer {
@@ -114,7 +114,7 @@ $box-height: 85%;
   }
   @include breakpoint(mobile) {
     right: -16%;
-    top: 15%;
+    top: 26vw;
     width: 82%;
   }
 }
@@ -268,11 +268,11 @@ $box-height: 85%;
     }
   }
   @include breakpoint(mobile){
-    top: 50%;
+    top: 80vw;
 
     p {
       font-size: 1rem;
-      margin: 10px 0 0 0;
+      margin: 1rem 0 0 0;
     }
   }
   @include breakpoint(mobile-xs){

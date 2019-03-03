@@ -4,7 +4,7 @@
   "description": "Homepage for everything Chris",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production && webpack-dev-server --mode production",
+    "build": "webpack --mode production",
     "dev": "webpack --mode development && webpack-dev-server --mode development"
   },
   "author": "Chris Jiang",
