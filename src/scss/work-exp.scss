@@ -1,0 +1,153 @@
+#work-exp {
+  // sampled colors for work logos
+  $lcbo: #BB8985;
+  $lcbo-l: #FAC0C4;
+  $upverter: #D0BF6C;
+  $upverter-l: #EFE3A6;
+  $amex: #6396BC;
+  $amex-l: #77B5E2;
+  $opentext: #707070;
+  $opentext-l: #B3B3B3;
+  $manulife: #588372;
+  $manulife-l: #73A993;
+
+  // General styles
+  .uk-flex {
+    padding: 0 4rem;
+  }
+  .uk-card {
+    $square-dim: 36vh;
+    $vertical-margin: (50vh - $square-dim) / 4.5;
+    $horizontal-margin: (25vw) / 6;
+
+    border: 8px solid white;
+    box-shadow: none;
+    height: $square-dim;
+    margin: $vertical-margin $horizontal-margin;
+    padding: 1.4rem;
+    width: $square-dim;
+
+    &:hover {
+      @include transition();
+      @include box-shadow();
+    }
+  }
+  .uk-card-body {
+    padding: 0;
+    margin: auto;
+    width: 80%;
+  }
+  %images {
+    display: block;
+    margin: auto;
+  }
+  %hr-line {
+    border-top: 3px solid;
+    margin: 1rem auto 1.3rem;
+    width: 30%;
+  }
+  %job-title {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  // lcbo-next
+  .lcbo-card {
+
+    &:hover {
+      border-color: $lcbo-l;
+    }
+    #lcbo {
+      @extend %images;
+      width: 100%;
+    }
+    .lcbo-line {
+      @extend %hr-line;
+      border-color: $lcbo;
+    }
+    .lcbo-title {
+      @extend %job-title;
+      color: $lcbo;
+    }
+  }
+
+  // upverter
+  .upverter-card {
+
+    &:hover {
+      border-color: $upverter-l;
+    }
+    #upverter {
+      @extend %images;
+      width: 84%;
+    }
+    .upverter-line {
+      @extend %hr-line;
+      border-color: $upverter;
+    }
+    .upverter-title {
+      @extend %job-title;
+      color: $upverter;
+    }
+  }
+
+  // amex
+  .amex-card {
+
+    &:hover {
+      border-color: $amex-l;
+    }
+    #amex {
+      @extend %images;
+      width: 74%;
+    }
+    .amex-line {
+      @extend %hr-line;
+      border-color: $amex;
+    }
+    .amex-title {
+      @extend %job-title;
+      color: $amex;
+    }
+  }
+
+  // opentext
+  .opentext-card {
+
+    &:hover {
+      border-color: $opentext-l;
+    }
+    #opentext {
+      @extend %images;
+      width: 82%;
+    }
+    .opentext-line {
+      @extend %hr-line;
+      border-color: $opentext;
+    }
+    .opentext-title {
+      @extend %job-title;
+      color: $opentext;
+    }
+  }
+
+  // manulife
+  .manulife-card {
+
+    &:hover {
+      border-color: $manulife-l;
+    }
+    #manulife {
+      @extend %images;
+      width: 100%;
+    }
+    .manulife-line {
+      @extend %hr-line;
+      border-color: $manulife;
+    }
+    .manulife-title {
+      @extend %job-title;
+      color: $manulife;
+    }
+  }
+}
