@@ -42,7 +42,11 @@
     top: 17.5%;
     width: 40%;
   }
-  .box-violet, .box-teal, .box-red {
+  .box-yellow {
+    @extend %box;
+    background-color: $dark-yellow;
+  }
+  .box-violet, .box-teal, .box-red, .box-yellow {
     @extend %project-box;
 
     @include breakpoint(mobile) {
@@ -53,11 +57,24 @@
       width: 60vw;
     }
   }
+  
 
   //image alignment
   %project-img {
     position: absolute;
     left: 0;
+  }
+  #upverter-mockups {
+    @extend %project-img;
+    bottom: 13.5%;
+    left: 2%;
+    width: 46%;
+
+    @include breakpoint(mobile) {
+      top: 2.5%;
+      left: 1.5%;
+      width: 100%;
+    }
   }
   #pokemon {
     @extend %project-img;
@@ -111,6 +128,9 @@
         font-size: 2.8rem;
       }
     }
+    .project-h1-yellow {
+      color: $dark-yellow;
+    }
     .project-h1-violet {
       color: $dark-violet;
     }
@@ -122,12 +142,15 @@
     }
 
     h2 {
-      @include margin(-2.5% null 0 null);
+      @include margin(-1% null 0 null);
       font-size: 3.3rem;
 
       @include breakpoint(mobile) {
         font-size: 1.8rem;
       }
+    }
+    .project-h2-yellow {
+      color: $yellow;
     }
     .project-h2-violet {
       color: $violet;
@@ -159,10 +182,24 @@
         }
       }
     }
+
+    .skill-tag-yellow {
+      @extend %skill-tag;
+      background-color: $dark-yellow;
+    }
+
     %project-button {
       @include transition();
       text-decoration: none;
       font-size: 1rem;
+    }
+    .project-button-yellow {
+      @extend %project-button;
+      color: $yellow;
+
+      &:hover {
+        color: $dark-yellow;
+      }
     }
     .project-button-violet {
       @extend %project-button;
